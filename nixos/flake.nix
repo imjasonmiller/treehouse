@@ -2,7 +2,7 @@
   description = "Jason's flake";
 
   inputs = {
-    nixkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
   outputs = { self, nixpkgs }: {
