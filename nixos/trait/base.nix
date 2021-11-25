@@ -5,7 +5,7 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  environment.systemPackges = with pkgs; [
+  environment.systemPackages = with pkgs; [
     # Shell utilities
     fd
     fzf
