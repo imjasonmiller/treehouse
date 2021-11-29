@@ -13,6 +13,7 @@
         modules = with self.nixosModules; [
           platform.baobab
           trait.base
+          trait.fonts
           user.jason
         ];
       };
@@ -22,6 +23,7 @@
       platform.baobab = ./platform/baobab.nix;
 
       trait.base = ./trait/base.nix;
+      trait.fonts = ./trait/fonts.nix;
 
       user.jason = ./user/jason.nix;
     };
