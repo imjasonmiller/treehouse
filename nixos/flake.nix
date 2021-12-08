@@ -21,7 +21,7 @@
 
           user.jason
 
-          home-manager.nixosModules.home-manager import ./home-manager
+          # home-manager.nixosModules.home-manager import ./home-manager
         ];
       };
     };
