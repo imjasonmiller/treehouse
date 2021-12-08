@@ -1,24 +1,25 @@
 { config, pkgs, lib, ... }:
 {
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-    extraPackages = with pkgs; [
-      alacritty
-      swaylock
-      swayidle
-      grim
-      kanshi
-      mako
-      slurp
-      waybar
-      wl-clipboard 
-      wofi
-      xwayland
-    ];
-  };
 
   config = {
+    programs.sway = {
+      enable = true;
+      wrapperFeatures.gtk = true;
+      extraPackages = with pkgs; [
+        alacritty
+        swaylock
+        swayidle
+        grim
+        kanshi
+        mako
+        slurp
+        waybar
+        wl-clipboard 
+        wofi
+        xwayland
+      ];
+    };
+
     environment.systemPackages = [
       (
         pkgs.writeTextFile {
@@ -34,24 +35,23 @@
             exec systemctl --user start sway.service
           '';
         }
-      )
-    ];
-  };
+        )
+      ];
 
-  systemd.user.targets.sway-session = {
-    description = "Sway compositor session";
-    documentation = [ "man:systemd.special(7)" ];
-    bindsTo = [ "graphical-session.target" ];
-    wants = [ "graphical-session-pre.target" ];
-    after = [ "graphical-session-pre.target" ];
-  };
+      systemd.user.targets.sway-session = {
+        description = "Sway compositor session";
+        documentation = [ "man:systemd.special(7)" ];
+        bindsTo = [ "graphical-session.target" ];
+        wants = [ "graphical-session-pre.target" ];
+        after = [ "graphical-session-pre.target" ];
+      };
 
-  systemd.user.services.sway = {
-    description = "Sway - Wayland window maanger";
-    documentation = [ "man:sway(5)" ];
-    bindsTo = [ "graphical-session.target" ];
-    wants = [ "graphical-session-pre.target" ];
-    after = [ "graphical-session-pre.target" ];
+      systemd.user.services.sway = {
+        description = "Sway - Wayland window maanger";
+        documentation = [ "man:sway(5)" ];
+        bindsTo = [ "graphical-session.target" ];
+        wants = [ "graphical-session-pre.target" ];
+        after = [ "graphical-session-pre.target" ];
     # We explicitly unset PATH here, as we want it to be set by
     # systemctl --user import-environment in startsway
     environment.PATH = lib.mkForce null;
@@ -65,4 +65,5 @@
       TimeoutStopSec = 10;
     };
   };
+};
 }
