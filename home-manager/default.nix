@@ -47,12 +47,13 @@
 
       home.packages = with pkgs; [
         blender
+        firefox-devedition-bin
         obs-studio
         rustup
         starship
         spotify
         tdesktop
-        firefox-devedition-bin
+        zola
       ];
     };
 
