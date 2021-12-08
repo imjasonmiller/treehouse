@@ -50,10 +50,12 @@
         firefox-devedition-bin
         obs-studio
         rustup
+        slack
+        spotify
         starship
         spotify
         tdesktop
-        zola
+        zola 
       ];
     };
 
