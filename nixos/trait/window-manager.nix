@@ -18,23 +18,25 @@
     ];
   };
 
-  environment.systemPackages = environment.systemPackages ++ [
-    (
-      pkgs.writeTextFile {
-        name = "startsway";
-        destination = "/bin/startsway";
-        executable = true;
-        text = ''
-          #! ${pkgs.bash}/bin/bash
+  config = {
+    environment.systemPackages = [
+      (
+        pkgs.writeTextFile {
+          name = "startsway";
+          destination = "/bin/startsway";
+          executable = true;
+          text = ''
+            #! ${pkgs.bash}/bin/bash
 
-          # first import environment variables from the login manager
-          systemctl --user import-environment
-          # then start the service
-          exec systemctl --user start sway.service
-        '';
-      }
-    )
-  ];
+            # first import environment variables from the login manager
+            systemctl --user import-environment
+            # then start the service
+            exec systemctl --user start sway.service
+          '';
+        }
+      )
+    ];
+  };
 
   systemd.user.targets.sway-session = {
     description = "Sway compositor session";
