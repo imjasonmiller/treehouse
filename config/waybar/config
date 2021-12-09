@@ -1,0 +1,75 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "modules-left": ["clock", "sway/workspaces", "sway/window"],
+    "modules-center": ["sway/mode"],
+    "modules-right":["custom/github", "network", "pulseaudio", "cpu", "tray"],
+ 
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": " {name} ",
+        "persistent_workspaces": {
+            "1:Web": [],
+            "2:Code": [],
+            "3:Other": [],
+            "4:Media": [],
+            "5:Chat": []
+        }
+    },
+
+    "sway/window": {
+        "format": " {}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "clock": {
+        "format": "{:%a  %H:%M  %p}", 
+        "format-alt": "{:%a  %b%e  %H:%M  %p}", 
+        "tooltip": false
+    },
+
+    "sway/mode": {
+        "format": "<span rise='-2500' font='14'>  </span> {} ",
+        "max-length": 50
+    },
+
+    "custom/github": {
+        "format": "<span rise='3000'>{}</span> <span font='16'> </span>",
+        "return-type": "json",
+        "interval": 10,
+        "exec": "$HOME/.config/waybar/github.sh",
+        "tooltip": false,
+        "on-click": "xdg-open https://github.com/notifications"
+    },
+
+    "network": {
+        "interface": "enp4s0",
+        "format-icons": {
+            "default": "" 
+        },
+        "format-ethernet": "<span rise='3000'>{ipaddr}</span> <span font='16'>{icon}</span>",
+        "format-disconnected": "Disconnected",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "<span rise='3000'>{volume}%</span> <span rise='-1500' font='16'>{icon}</span>",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "format": "CPU {usage}%",
+        "tooltip": false
+    }
+}
+
