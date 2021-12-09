@@ -18,7 +18,6 @@
         ./firefox.nix
         ./fzf.nix
         ./git.nix
-        ./waybar.nix
         ./starship.nix
         ./zathura.nix
         ./zsh.nix
