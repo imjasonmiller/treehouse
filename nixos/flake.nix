@@ -2,11 +2,12 @@
   description = "Jason's flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nur.url = "github:nix-community/NUR";
     home-manager.url = "github:nix-community/home-manager";
   };
 
-  outputs = { self, nixpkgs, home-manager }: {
+  outputs = inputs@{ self, nixpkgs, nur, home-manager }: {
 
     nixosConfigurations = {
       baobab = nixpkgs.lib.nixosSystem {
@@ -21,7 +22,10 @@
 
           user.jason
 
-          # home-manager.nixosModules.home-manager import ./home-manager
+          home-manager.nixosModules.home-manager
+          home.jason
+
+          { nixpkgs.overlays = [ nur.overlay ]; }
         ];
       };
     };
@@ -35,6 +39,7 @@
       trait.window-manager = ./trait/window-manager.nix;
 
       user.jason = ./user/jason.nix;
+      home.jason = import ./../home-manager;
     };
   };
 }
