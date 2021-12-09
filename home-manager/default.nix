@@ -1,11 +1,10 @@
-{ config, lib, pkgs, inputs, ... }: {
+{ config, lib, pkgs, ... }:
+{
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
 
     users.jason = { pkgs, ... }: {
-      xdg.enable = true;
-
       xdg = {
         enable = true;
         userDirs = {
@@ -55,10 +54,9 @@
         starship
         spotify
         tdesktop
+        vlc
         zola 
       ];
     };
-
-    home-manager.extraSpecialArgs = { inherit inputs; };
   };
 }
