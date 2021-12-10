@@ -1,13 +1,13 @@
-{ pkgs, nur, ... }:
+{ pkgs, ... }:
 {
-  nixpkgs.overlays = [ nur.overlay ];
+  # nixpkgs.overlays = [ nur.overlay ];
 
   programs.firefox = {
     enable = true;
-    extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-      multi-account-containers
-      ublock-origin
-    ];
+    # extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+    #   multi-account-containers
+    #   ublock-origin
+    # ];
     profiles = {
       default = {
         isDefault = true;
