@@ -3,7 +3,7 @@
   users = {
     users.jason = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" "docker" ];
+      extraGroups = [ "wheel" "networkmanager" "transmission" "docker" ];
     };
     defaultUserShell = pkgs.zsh;
   };
