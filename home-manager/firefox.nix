@@ -3,7 +3,8 @@
   # nixpkgs.overlays = [ nur.overlay ];
 
   programs.firefox = {
-    enable = true;
+    enable = false;
+    package = pkgs.firefox-devedition-bin;
     # extensions = with pkgs.nur.repos.rycee.firefox-addons; [
     #   multi-account-containers
     #   ublock-origin

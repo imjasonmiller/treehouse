@@ -25,7 +25,7 @@
           home-manager.nixosModules.home-manager
           home.jason
 
-          { nixpkgs.overlays = [ nur.overlay ]; }
+          # { nixpkgs.overlays = [ nur.overlay ]; }
         ];
       };
     };
