@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs; [
     # Shell utilities
     fd
+    feh
     fzf
     git
     htop
