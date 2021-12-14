@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
   use { 
     'nvim-lualine/lualine.nvim',
     config = function()
-      require('plugins.lualine')
+      require('plugins.configs.lualine')
     end
   }
 
