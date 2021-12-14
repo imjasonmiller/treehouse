@@ -1,2 +1,3 @@
-require('utils/bindings')
+require('utils.bindings')
+require('plugins.packer')
 require('editor')
