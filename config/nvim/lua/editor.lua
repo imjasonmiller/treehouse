@@ -113,3 +113,14 @@ nmap('<A-k>', '[e')
 -- Move multiple selected lines in visual mode using <alt + j> or <alt + k>
 vmap('<A-j>', ']egv')
 vmap('<A-k>', '[egv')
+
+---------------
+-- Telescope --
+---------------
+local tb = "<cmd>lua require('telescope.builtin')."
+nnoremap('<leader>ff', tb .. 'find_files()<cr>')
+nnoremap('<leader>fe', tb .. 'file_browser()<cr>')
+nnoremap('<leader>fg', tb .. 'live_grep()<cr>')
+nnoremap('<leader>fb', tb .. 'buffers()<cr>')
+nnoremap('<leader>fh', tb .. 'help_tags()<cr>')
+nnoremap('<leader>la', tb .. 'lsp_code_actions()<cr>')
