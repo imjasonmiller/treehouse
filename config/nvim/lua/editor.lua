@@ -1,4 +1,4 @@
-local maps = require("maps")
+local maps = require("utils.maps")
 
 -- Import remap binding
 local nmap = maps.nmap
