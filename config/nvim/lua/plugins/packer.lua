@@ -29,6 +29,38 @@ return require('packer').startup(function(use)
   use 'LnL7/vim-nix'
   use 'editorconfig/editorconfig-vim'
   use 'tbastos/vim-lua' 
+  use 'rust-lang/rust.vim'
+
+  -- Editor enhancements
+  -- Enhanced commenting
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
+  -- Indentation guides
+  use {
+    'lukas-reineke/indent-blankline.nvim', 
+    config = function()
+      require('indent_blankline').setup()
+    end
+  }
+  -- Git decorations
+  use {
+    'lewis6991/gitsigns.nvim',
+     requires = {
+       'nvim-lua/plenary.nvim'
+     },
+     config = function()
+       require('gitsigns').setup()
+     end
+  }
+  -- Fuzzy finder
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
 
   -- Automatically set up the configuration after cloning packer.nvim
   -- Put this at the end after all plugins
