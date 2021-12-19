@@ -67,6 +67,15 @@ return require('packer').startup(function(use)
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
 
+  -- Language Server Protocol support 
+  use 'neovim/nvim-lspconfig'
+  use {
+    'williamboman/nvim-lsp-installer',
+    config = function()
+      require('plugins.config.lsp_installer')
+    end
+  }
+
   -- Automatically set up the configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
