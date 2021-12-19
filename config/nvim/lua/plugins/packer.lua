@@ -76,6 +76,24 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Completion support
+  use {
+    'hrsh7th/nvim-cmp',
+    config = function()
+      require('plugins.configs.nvim_cmp')
+    end
+  }
+
+  -- Completion sources for nvim-cmp
+  use 'hrsh7th/cmp-nvim-lsp'         
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'             
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+
+  -- Add pictograms to completion sources
+  use 'onsails/lspkind-nvim'
+
   -- Automatically set up the configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

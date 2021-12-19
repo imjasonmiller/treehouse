@@ -30,7 +30,7 @@ require('lualine').setup{
     lualine_w = {
 	{
       'diagnostics',
-      sources = { 'nvim_lsp' },
+      sources = { 'nvim_diagnostic' },
       symbols = { error = ' ', warn = ' ', info = ' ' },
       diagnostics_color = {
         color_error = { fg = colors.red },

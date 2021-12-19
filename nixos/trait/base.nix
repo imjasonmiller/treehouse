@@ -18,6 +18,11 @@
     glxinfo
     neovim
     wl-clipboard
+    unzip
+    zip
+    # delet this
+    patchelf
+
   ];
 
   environment = {
