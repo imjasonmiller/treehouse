@@ -1,4 +1,3 @@
-
 vim.cmd('colorscheme gruvbox')				-- Use gruvbox colorscheme
 
 o.syntax = "on"
@@ -66,3 +65,51 @@ augroup END
 
 -- No line numbers in terminal mode
 vim.cmd([[au TermOpen * setlocal nonumber norelativenumber]])
+
+------------
+-- Remaps --
+------------
+g.mapleader = " "					-- Remap leader to <Space>
+
+-- Map <ctrl + c> and <ctrl + j> to <esc>
+inoremap('<C-j>', '<Esc>')
+vnoremap('<C-j>', '<Esc>')
+inoremap('<C-c>', '<Esc>')
+vnoremap('<C-c>', '<Esc>')
+
+-- Disable arrow keys and force yourself to use the home row
+nnoremap('<up>', '<nop>')
+nnoremap('<down>', '<nop>')
+inoremap('<up>', '<nop>')
+inoremap('<down>', '<nop>')
+inoremap('<left>', '<nop>')
+inoremap('<right>', '<nop>')
+
+-- Jump to start and end of line using the home row keys
+noremap('H', '^')
+noremap('L', '$')
+
+-- Switch between current and previous buffer using <leader>
+nnoremap('<leader><leader>', '<C-^>')
+
+-- Switch buffer using <left> and <right>
+nnoremap('<left>', ':bp<CR>')
+nnoremap('<right>', ':bn<CR>')
+
+-- Center search results
+nnoremap_silent('n', 'nzz')
+nnoremap_silent('N', 'Nzz')
+nnoremap_silent('*', '*zz')
+nnoremap_silent('#', '3zz')
+nnoremap_silent('g*', 'g*zz')
+
+-- Quick save
+nmap('<leader>w', ':w<CR>')
+
+-- Move a single selected line in normal mode using <alt + j> or <alt + k>
+nmap('<A-j>', ']e')
+nmap('<A-k>', '[e')
+
+-- Move multiple selected lines in visual mode using <alt + j> or <alt + k>
+vmap('<A-j>', ']egv')
+vmap('<A-k>', '[egv')
