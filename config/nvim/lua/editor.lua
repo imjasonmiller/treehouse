@@ -1,3 +1,12 @@
+local maps = require("maps")
+
+-- Import remap binding
+local nmap = maps.nmap
+local nnoremap = maps.nnoremap
+local noremap = maps.noremap
+local vmap = maps.vmap
+local vnoremap = maps.vnoremap
+
 vim.cmd('colorscheme gruvbox')				-- Use gruvbox colorscheme
 
 o.syntax = "on"

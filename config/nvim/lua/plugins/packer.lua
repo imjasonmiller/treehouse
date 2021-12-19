@@ -32,6 +32,8 @@ return require('packer').startup(function(use)
   use 'rust-lang/rust.vim'
 
   -- Editor enhancements
+  use 'tpope/vim-unimpaired'        -- Useful bracket mappings
+
   -- Enhanced commenting
   use {
     'numToStr/Comment.nvim',
@@ -39,6 +41,7 @@ return require('packer').startup(function(use)
       require('Comment').setup()
     end
   }
+
   -- Indentation guides
   use {
     'lukas-reineke/indent-blankline.nvim', 
@@ -46,6 +49,7 @@ return require('packer').startup(function(use)
       require('indent_blankline').setup()
     end
   }
+
   -- Git decorations
   use {
     'lewis6991/gitsigns.nvim',
@@ -56,6 +60,7 @@ return require('packer').startup(function(use)
        require('gitsigns').setup()
      end
   }
+
   -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
