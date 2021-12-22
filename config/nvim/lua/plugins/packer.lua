@@ -26,6 +26,10 @@ return require('packer').startup(function(use)
   }
 
   -- Syntactic language support
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
   use 'LnL7/vim-nix'
   use 'editorconfig/editorconfig-vim'
   use 'tbastos/vim-lua' 
