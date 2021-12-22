@@ -22,7 +22,7 @@
     zip
     # delet this
     patchelf
-
+    rust-analyzer
   ];
 
   environment = {
