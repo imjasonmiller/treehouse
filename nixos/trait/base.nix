@@ -18,11 +18,7 @@
     glxinfo
     neovim
     wl-clipboard
-    unzip
-    zip
-    # delet this
     patchelf
-    rust-analyzer
   ];
 
   environment = {
