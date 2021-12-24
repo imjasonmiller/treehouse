@@ -14,6 +14,9 @@
         safecrlf = true;
         editor = "nvim";
       };
+      gpg = {
+        format = "ssh";
+      };
       init = {
         defaultBranch = "main";
       };
