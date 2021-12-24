@@ -19,24 +19,35 @@ require('lualine').setup{
     section_separators = {},
   },
   sections = {
-    lualine_b = { { 'b:gitsigns_head', icon = '' }, }, 
+    lualine_b = {
+      {
+        'b:gitsigns_head',
+        icon = ''
+      },
+    },
     lualine_c = {
       {
         "filename",
-	file_status = true, -- displays file status (readonly status, modified status)
-	path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
+	      file_status = true, -- displays file status (readonly status, modified status)
+	      path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
       },
-    },
-    lualine_w = {
-	{
-      'diagnostics',
-      sources = { 'nvim_diagnostic' },
-      symbols = { error = ' ', warn = ' ', info = ' ' },
-      diagnostics_color = {
-        color_error = { fg = colors.red },
-        color_warn = { fg = colors.yellow },
-        color_info = { fg = colors.cyan },
+      {
+        'diff',
+        color_added = colors.green,
+        color_modified = colors.yellow,
+        color_removed = colors.red,
       },
+	    {
+        'diagnostics',
+        sources = { 'nvim_diagnostic' },
+        colored = true,
+        symbols = { error = 'E ', warn = 'W ', info = 'I ', hint = 'H ' },
+        diagnostics_color = {
+          error = 'DiagnosticError',
+          warn = 'DiagnosticWarn',
+          info = 'DiagnosticInfo',
+          hint = 'DiagnosticHint',
+        },
       },
     },
     lualine_x = {'encoding', { 'fileformat', icons_enabled = false }, 'filetype'},
@@ -45,10 +56,9 @@ require('lualine').setup{
     lualine_c = {
       {
         "filename",
-	file_status = true, -- displays file status (readonly status, modified status)
-	path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
+	      file_status = true, -- displays file status (readonly status, modified status)
+	      path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
       },
     },
   }
 }
-
