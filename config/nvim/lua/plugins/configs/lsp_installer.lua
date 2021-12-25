@@ -27,22 +27,18 @@ for _, name in pairs(servers) do
         local opts = {}
 
         if server.name == "rust_analyzer" then
-          opts = server:get_default_options()
-
-          -- See: https://github.com/simrat39/rust-tools.nvim#initial-setup
-          -- See: https://github.com/williamboman/nvim-lsp-installer/wiki/Rust
           -- Initialize the LSP via rust-tools instead
-          -- require('rust-tools').setup {
+          require('rust-tools').setup {
               -- The "server" property provided in rust-tools setup function are the
               -- settings rust-tools will provide to lspconfig during init.            --
               -- We merge the necessary settings from nvim-lsp-installer (server:get_default_options())
               -- with the user's own settings (opts).
-              -- server = vim.tbl_deep_extend('force', server:get_default_options(), opts),
-          -- }
-          -- server:attach_buffers()
+              server = vim.tbl_deep_extend('force', server:get_default_options(), opts),
+          }
+          server:attach_buffers()
+        else
+          requested_server:setup(opts)
         end
-
-        requested_server:setup(opts)
     end)
 
     if not requested_server:is_installed() then

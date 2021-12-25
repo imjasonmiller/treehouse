@@ -35,8 +35,19 @@ return require('packer').startup(function(use)
   use 'tbastos/vim-lua' 
   use 'rust-lang/rust.vim'
 
+  -- Rust tools
+  use {
+    'simrat39/rust-tools.nvim',
+    requires = {
+      'nvim-lua/popup.nvim',
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'nvim-telescope/telescope-ui-select.nvim',
+    },
+  }
+
   -- Editor enhancements
-  use 'tpope/vim-unimpaired'        -- Useful bracket mappings
+  use 'tpope/vim-unimpaired'          -- Useful bracket mapping
 
   -- Enhanced commenting
   use {
