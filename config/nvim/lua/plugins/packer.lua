@@ -35,6 +35,8 @@ return require('packer').startup(function(use)
   use 'tbastos/vim-lua' 
   use 'rust-lang/rust.vim'
   use 'posva/vim-vue' 
+  use 'cespare/vim-toml' 
+  use 'stephpy/vim-yaml' 
 
   -- Rust tools
   use {
