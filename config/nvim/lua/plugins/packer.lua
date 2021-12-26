@@ -30,10 +30,11 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-  use 'LnL7/vim-nix'
   use 'editorconfig/editorconfig-vim'
+  use 'LnL7/vim-nix'
   use 'tbastos/vim-lua' 
   use 'rust-lang/rust.vim'
+  use 'posva/vim-vue' 
 
   -- Rust tools
   use {
