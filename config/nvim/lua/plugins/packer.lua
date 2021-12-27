@@ -82,7 +82,10 @@ return require('packer').startup(function(use)
   -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
+    config = function()
+      require('plugins.configs.telescope')
+    end
   }
 
   -- Language Server Protocol support 
@@ -101,6 +104,9 @@ return require('packer').startup(function(use)
       require('plugins.configs.nvim_cmp')
     end
   }
+
+  -- Debugging support
+  use 'mfussenegger/nvim-dap'
 
   -- Completion sources for nvim-cmp
   use 'hrsh7th/cmp-nvim-lsp'         
