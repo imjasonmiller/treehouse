@@ -17,8 +17,11 @@
     # System utilities
     glxinfo
     neovim
-    wl-clipboard
     patchelf
+    wl-clipboard
+    # Debugging
+    gdb
+    lldb
   ];
 
   environment = {
