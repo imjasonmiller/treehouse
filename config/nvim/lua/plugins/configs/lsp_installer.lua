@@ -17,6 +17,7 @@ end
 local servers = {
   "rust_analyzer",
   "vuels",
+  "cssls",
 }
 
 for _, name in pairs(servers) do
