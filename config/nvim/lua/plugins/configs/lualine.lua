@@ -53,7 +53,6 @@ require('lualine').setup{
         'diagnostics',
         sources = { 'nvim_diagnostic' },
         symbols = { error = 'E ', warn = 'W ', info = 'I ', hint = 'H ' },
-        colored = false,
         diagnostics_color = {
           error = 'DiagnosticError',
           warn = 'DiagnosticWarn',
