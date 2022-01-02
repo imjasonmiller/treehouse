@@ -19,6 +19,8 @@
     neovim
     patchelf
     wl-clipboard
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
     # Debugging
     gdb
     lldb
