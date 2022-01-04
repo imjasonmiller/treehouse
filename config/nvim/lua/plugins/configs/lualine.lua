@@ -23,6 +23,8 @@ local function diff_source()
     end
 end
 
+local get_color = require'lualine.utils.utils'.extract_highlight_colors
+
 require('lualine').setup{
   options = {
     theme = 'gruvbox',
@@ -54,10 +56,10 @@ require('lualine').setup{
         sources = { 'nvim_diagnostic' },
         symbols = { error = 'E ', warn = 'W ', info = 'I ', hint = 'H ' },
         diagnostics_color = {
-          error = 'DiagnosticError',
-          warn = 'DiagnosticWarn',
-          info = 'DiagnosticInfo',
-          hint = 'DiagnosticHint',
+          error = { fg = get_color("DiagnosticError", "fg") },
+	        warn = { fg = get_color("DiagnosticWarn", "fg") },
+	        info = { fg = get_color("DiagnosticInfo", "fg") },
+	        hint = { fg = get_color("DiagnosticHint", "fg") },
         },
       },
     },
