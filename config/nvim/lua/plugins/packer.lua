@@ -38,6 +38,9 @@ return require('packer').startup(function(use)
   use 'cespare/vim-toml' 
   use 'stephpy/vim-yaml' 
 
+  -- Debug tools while creating themes
+  use 'nvim-treesitter/playground'
+
   -- Rust tools
   use {
     'simrat39/rust-tools.nvim',
