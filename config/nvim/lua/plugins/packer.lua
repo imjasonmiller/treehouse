@@ -28,6 +28,9 @@ return require('packer').startup(function(use)
   -- Syntactic language support
   use {
     'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require('plugins.configs.treesitter')
+    end,
     run = ':TSUpdate'
   }
   use 'editorconfig/editorconfig-vim'
