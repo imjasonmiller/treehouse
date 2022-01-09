@@ -17,6 +17,7 @@
 
           trait.base
           trait.fonts
+          trait.tools
           trait.torrents
           trait.networking
           trait.window-manager
@@ -36,6 +37,7 @@
 
       trait.base = ./trait/base.nix;
       trait.fonts = ./trait/fonts.nix;
+      trait.tools = ./trait/tools.nix;
       trait.torrents = ./trait/torrents.nix;
       trait.networking = ./trait/networking.nix;
       trait.window-manager = ./trait/window-manager.nix;
