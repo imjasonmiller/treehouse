@@ -1,3 +1,5 @@
+require('nvim-treesitter.install').compiler = { "clang++" }
+
 require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = "maintained",
@@ -6,7 +8,10 @@ require('nvim-treesitter.configs').setup {
   sync_install = false,
 
   -- List of parsers to ignore installing
-  ignore_install = { "javascript" },
+  ignore_install = { 
+    "tree-sitter-rst",
+    "tree-sitter-svelte",
+  },
 
   highlight = {
     -- `false` will disable the whole extension
