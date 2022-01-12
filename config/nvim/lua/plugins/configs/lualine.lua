@@ -25,9 +25,11 @@ end
 
 local get_color = require'lualine.utils.utils'.extract_highlight_colors
 
+local custom_theme = require('github-primer.lualine.dark').
+
 require('lualine').setup{
   options = {
-    theme = 'gruvbox',
+    theme = custom_theme,
     component_separators = "|",
     section_separators = {},
   },
