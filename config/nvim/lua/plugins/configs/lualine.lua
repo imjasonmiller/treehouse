@@ -25,7 +25,7 @@ end
 
 local get_color = require'lualine.utils.utils'.extract_highlight_colors
 
-local custom_theme = require('github-primer.lualine.dark').
+local custom_theme = require('github-primer.lualine.dark')
 
 require('lualine').setup{
   options = {
