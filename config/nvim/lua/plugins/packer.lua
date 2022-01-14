@@ -43,7 +43,7 @@ return require('packer').startup(function(use)
 
   -- Debug tools while creating themes
   use 'nvim-treesitter/playground'
-  use '~/Work/github-primer'
+  use '~/Work/github-primer.nvim'
 
   -- Rust tools
   use {
