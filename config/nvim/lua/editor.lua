@@ -26,6 +26,8 @@ o.expandtab = true					                      -- Expand tabs to spaces
 o.signcolumn = "yes"					                    -- Always draw the sign column to prevent buffer movement
 wo.relativenumber = true				                  -- Display relative line numbers
 wo.number = true 					                        -- Display current line number
+o.cursorline = true                               -- Highlight current cursor line
+o.cursorlineopt = "number"                        -- Highlight only current line number
 
 -- Performance
 o.synmaxcol = 1000					                      -- Disable syntax highlighting on long lines
