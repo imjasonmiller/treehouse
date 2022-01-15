@@ -4,6 +4,6 @@
     clang
     cargo-edit
     cargo-flamegraph
-    gcc
+    zig
   ];
 }

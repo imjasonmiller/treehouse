@@ -1,4 +1,4 @@
-require('nvim-treesitter.install').compiler = { "clang++" }
+require('nvim-treesitter.install').compiler = { "zig" }
 
 require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
