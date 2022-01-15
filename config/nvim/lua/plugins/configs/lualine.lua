@@ -1,17 +1,3 @@
-local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
-}
-
 local function diff_source()
     local gitsigns = vim.b.gitsigns_status_dict
     if gitsigns then
@@ -47,14 +33,12 @@ require('lualine').setup{
       {
         'diff',
         source = diff_source,
-        color_added = colors.green,
-        color_modified = colors.yellow,
-        color_removed = colors.red,
+        colored = false,
       },
 	    {
         'diagnostics',
         sources = { 'nvim_diagnostic' },
-        symbols = { error = 'E ', warn = 'W ', info = 'I ', hint = 'H ' },
+        symbols = { error = 'E', warn = 'W', info = 'I', hint = 'H' },
         diagnostics_color = {
           error = { fg = get_color("DiagnosticError", "fg") },
 	        warn = { fg = get_color("DiagnosticWarn", "fg") },
