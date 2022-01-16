@@ -1,4 +1,4 @@
-require('nvim-treesitter.install').compiler = { "zig" }
+require('nvim-treesitter.install').compilers = { "gcc" }
 
 require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -11,6 +11,7 @@ require('nvim-treesitter.configs').setup {
   ignore_install = { 
     "tree-sitter-rst",
     "tree-sitter-svelte",
+    "tree-sitter-markdown",
   },
 
   highlight = {
@@ -18,7 +19,7 @@ require('nvim-treesitter.configs').setup {
     enable = true,
 
     -- list of language that will be disabled
-    disable = {},
+    disable = { },
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).

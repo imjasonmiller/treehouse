@@ -5,5 +5,6 @@
     cargo-edit
     cargo-flamegraph
     zig
+    gcc
   ];
 }
