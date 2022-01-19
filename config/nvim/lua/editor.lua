@@ -8,7 +8,6 @@ local vmap = maps.vmap
 local vnoremap = maps.vnoremap
 
 o.termguicolors = true                            -- Enable 24-bit RGB color
-vim.cmd('colorscheme github_primer_dark')				            -- Use gruvbox colorscheme
 
 o.syntax = "on"
 o.hidden = true  					                        -- Do not unload a buffer when it is abandoned
