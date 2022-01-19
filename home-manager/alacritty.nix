@@ -9,15 +9,15 @@
       };
       font = {
         normal = {
-          family = "Fira Code Nerd Font";
-          style = "Bold";
+          family = "Jetbrains Mono";
+          style = "normal";
         };
         bold = {
-          family = "Fira Code Nerd Font";
+          family = "Jetbrains Mono";
           style = "Bold";
         };
         italic = {
-          family = "Fira Code Nerd Font";
+          family = "Jetbrains Mono";
           style = "Italic";
         };
         size = 11;
