@@ -9,15 +9,15 @@
       };
       font = {
         normal = {
-          family = "Jetbrains Mono";
+          family = "JetBrainsMono";
           style = "normal";
         };
         bold = {
-          family = "Jetbrains Mono";
+          family = "JetBrainsMono";
           style = "Bold";
         };
         italic = {
-          family = "Jetbrains Mono";
+          family = "JetBrainsMono";
           style = "Italic";
         };
         size = 11;
