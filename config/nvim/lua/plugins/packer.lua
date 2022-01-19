@@ -45,6 +45,7 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/playground'
   use {
     'projekt0n/github-nvim-theme',
+    after = "lualine.nvim",
     config = function()
       require('plugins.configs.github-nvim-theme')
     end

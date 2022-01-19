@@ -13,7 +13,7 @@ local get_color = require'lualine.utils.utils'.extract_highlight_colors
 
 require('lualine').setup{
   options = {
-    theme = "github-primer-dark",
+    theme = "github",
     component_separators = "|",
     section_separators = {},
   },
