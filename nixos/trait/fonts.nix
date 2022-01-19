@@ -7,7 +7,7 @@
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
-      (nerdfonts.override { fonts = [ "Jetbrains Mono" "FiraCode" ]; })
+      (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
     ];
     fontconfig = {
       enable = true;
@@ -17,7 +17,7 @@
         serif = [ "Noto Serif" ];
         sansSerif = [ "Noto Sans" ];
         emoji = [ "Noto Emoji" "Noto Music" ];
-        monospace = [ "Jetbrains Mono" "Fira Code Nerd Font" "Noto Sans Mono" ];
+        monospace = [ "JetBrainsMono" "Fira Code Nerd Font" "Noto Sans Mono" ];
       };
     };
   };
