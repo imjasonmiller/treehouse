@@ -6,5 +6,9 @@
     cargo-flamegraph
     zig
     gcc
+
+    # Profiling
+    valgrind
+    massif-visualizer
   ];
 }
