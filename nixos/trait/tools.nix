@@ -10,5 +10,8 @@
     # Profiling
     valgrind
     massif-visualizer
+
+    # File synchronization
+    syncthing
   ];
 }
