@@ -10,6 +10,7 @@
     # Profiling
     valgrind
     massif-visualizer
+    gnuplot
 
     # File synchronization
     syncthing
