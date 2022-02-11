@@ -4,8 +4,10 @@
     clang
     cargo-edit
     cargo-flamegraph
-    zig
     gcc
+    # High-performance drop-in replacement for existing unix linkers
+    mold
+    zig
 
     # Profiling
     valgrind
