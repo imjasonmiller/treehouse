@@ -23,6 +23,10 @@
         ./zsh.nix
       ];
 
+      home.file.".cargo/config.toml" = {
+        source = ./../config/cargo/config.toml;
+      };
+
       home.file.".config/nvim" = {
         source = ./../config/nvim;
         recursive = true;
