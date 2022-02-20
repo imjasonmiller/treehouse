@@ -5,8 +5,8 @@
     defaultCommand = "fd --type file --follow --exclude node_modules --exclude .git";
     defaultOptions = [
       "--height 20%"
-      "--color=fg:#D1D5DA,bg:#24292E,hl:#B392F0"
-      "--color=fg+:#D1D5DA,bg+:#24292E,hl+:#B392F0"
+      "--color=fg:#D1D5DA,bg:#2D333B,hl:#B392F0"
+      "--color=fg+:#D1D5DA,bg+:#2D333B,hl+:#B392F0"
       "--color=info:#f7ca88,prompt:#ffcc99,pointer:#79B8FF"
       "--color=marker:#FFAB70,spinner:#9a86fd,header:#DBEDFF"
       "--no-mouse"
