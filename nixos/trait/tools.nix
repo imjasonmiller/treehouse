@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 {
   environment.systemPackages = with pkgs; [
+    binutils
     clang
     cargo-edit
     cargo-watch
