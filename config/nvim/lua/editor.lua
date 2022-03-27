@@ -129,8 +129,9 @@ vmap('<A-k>', '[egv')
 -- Telescope --
 ---------------
 local tb = "<cmd>lua require('telescope.builtin')."
+local te = "<cmd>lua require('telescope').extensions."
 nnoremap('<leader>ff', tb .. 'find_files()<cr>')
-nnoremap('<leader>fe', tb .. 'file_browser()<cr>')
+nnoremap('<leader>fe', te .. 'file_browser.file_browser()<cr>')
 nnoremap('<leader>fg', tb .. 'live_grep()<cr>')
 nnoremap('<leader>fb', tb .. 'buffers()<cr>')
 nnoremap('<leader>fh', tb .. 'help_tags()<cr>')
