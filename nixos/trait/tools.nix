@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     clang
     cargo-edit
+    cargo-watch
     cargo-flamegraph
     gcc
     # High-performance drop-in replacement for existing unix linkers
