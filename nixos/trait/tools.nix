@@ -2,6 +2,8 @@
 {
   environment.systemPackages = with pkgs; [
     binutils
+    openssl
+    pkg-config
     clang
     cargo-edit
     cargo-watch
