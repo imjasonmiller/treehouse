@@ -29,6 +29,7 @@
   environment = {
     variables = {
       EDITOR = "nvim";
+      PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
     };
   };
 
