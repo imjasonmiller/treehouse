@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     binutils
-    openssl
     openssl.dev
     pkg-config
     clang
