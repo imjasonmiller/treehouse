@@ -14,6 +14,7 @@
     jq
     ripgrep
     tokei
+    delta
     # System utilities
     glxinfo
     neovim
