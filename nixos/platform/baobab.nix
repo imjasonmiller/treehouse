@@ -23,6 +23,8 @@
   networking.useDHCP = false;
   networking.interfaces.enp4s0.useDHCP = true;
 
+  virtualisation.docker.enable = true;  
+
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
