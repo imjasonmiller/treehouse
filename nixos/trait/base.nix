@@ -25,6 +25,9 @@
     # Debugging
     gdb
     lldb
+    # TODO: Update to below to better work with flakes
+    # https://rycee.gitlab.io/home-manager/#sec-flakes-standalone
+    home-manager
   ];
 
   environment = {

@@ -50,7 +50,7 @@
       home.packages = with pkgs; [
         blender
         firefox-devedition-bin
-        google-chrome
+        google-chrome-dev
         obs-studio
         rustup
         slack

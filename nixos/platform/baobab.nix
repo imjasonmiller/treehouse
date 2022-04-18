@@ -25,9 +25,15 @@
 
   virtualisation.docker.enable = true;  
 
-  # Enable sound.
+  # Enable sound
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+
+  # Enable Vulkan
+  hardware.opengl.driSupport = true;
+  hardware.opengl.extraPackages = with pkgs; [
+     amdvlk
+  ];
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/2EE0-9A18";
