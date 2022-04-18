@@ -50,15 +50,15 @@
       home.packages = with pkgs; [
         blender
         firefox-devedition-bin
+        google-chrome
         obs-studio
         rustup
         slack
         spotify
         starship
-        spotify
         tdesktop
         vlc
-        zola 
+        zola
       ];
     };
   };
