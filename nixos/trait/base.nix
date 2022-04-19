@@ -22,6 +22,7 @@
     wl-clipboard
     xdg-desktop-portal
     xdg-desktop-portal-gtk
+    vulkan-tools
     # Debugging
     gdb
     lldb
