@@ -35,6 +35,10 @@
      amdvlk
   ];
 
+  environment.variables.AMD_VULKAN_ICD = "RADV";
+  environment.variables.VK_ICD_FILENAMES =
+    "/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json";
+
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/2EE0-9A18";
     fsType = "vfat";
