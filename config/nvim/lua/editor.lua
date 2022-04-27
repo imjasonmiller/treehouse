@@ -64,18 +64,43 @@ o.clipboard = o.clipboard .. 'unnamedplus'
 -- Autocommands --
 ------------------
 -- Rust code style guidelines
-vim.cmd([[ au Filetype rust set colorcolumn=100 ]])
+vim.api.nvim_create_autocmd("Filetype", {
+  pattern = "rust",
+  callback = function() 
+    wo.colorcolumn = "100" 					            -- Highlight lines past col 100
+  end,
+})
 
 -- Highlight yanking
-vim.cmd([[
-augroup highlight_yank
-  autocmd!
-  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=500}
-augroup END
-]])
+local highlightYankGroup = vim.api.nvim_create_augroup(
+  "highlight_yank",
+  { clear = true }
+)
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = "highlight_yank",
+  pattern = "*",
+  callback = function() vim.highlight.on_yank({ on_visual = true }) end,
+})
 
--- No line numbers in terminal mode
-vim.cmd([[au TermOpen * setlocal nonumber norelativenumber]])
+-- Remove line numbers in terminal mode, start it in insert mode and delete the
+-- buffer when it is no longer displayed
+vim.api.nvim_create_augroup("TerminalMode", {})
+vim.api.nvim_create_autocmd("TermOpen", {
+  group = "TerminalMode",
+  pattern = "*",
+  callback = function()
+    wo.number = false                           -- Hide line numbers
+    wo.relativenumber = false                   -- Hide relative line number
+    vim.api.nvim_command("startinsert")
+  end,
+})
+vim.api.nvim_create_autocmd("TermLeave", {
+  group = "TerminalMode",
+  pattern = "term://*",
+  callback = function()
+    vim.opt.bufhidden = "delete"
+  end,
+})
 
 ------------
 -- Remaps --
