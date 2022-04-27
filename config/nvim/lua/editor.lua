@@ -33,7 +33,7 @@ o.synmaxcol = 1000					                      -- Disable syntax highlighting on l
 o.lazyredraw = true					                      -- Disable updates during non-typed commands, e.g. macros
 
 -- Status line improvements
-o.laststatus = 2					                        -- Always display the status line
+o.laststatus = 3					                        -- Use a global status line
 o.shortmess = o.shortmess .. "c"			            -- Do not display ins-completion messages
 
 -- Wrapping
