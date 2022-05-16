@@ -15,9 +15,15 @@ end
 
 -- Include the servers you want to have installed by default below
 local servers = {
-  "rust_analyzer",
-  "vuels",
   "cssls",
+  "dockerls",
+  "eslint",
+  "graphql",
+  "jsonls",
+  "rust_analyzer",
+  "tailwindcss",
+  "tsserver",
+  "volar",
 }
 
 for _, name in pairs(servers) do
