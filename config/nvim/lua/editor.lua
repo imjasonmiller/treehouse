@@ -53,9 +53,9 @@ o.smartcase = true  					                    -- Override ignorecase if pattern c
 o.gdefault = true   					                    -- Substitute all matches on a line
 
 -- Disable backups
-g.nobackup = true
-g.noswapfile = true
-g.nowritebackup = true
+g.backup = false
+o.swapfile = false
+g.writebackup = false
 
 -- Use clipboard for all operations instead of `+` and/or `*` registers
 o.clipboard = o.clipboard .. 'unnamedplus'
