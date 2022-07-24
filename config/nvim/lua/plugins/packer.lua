@@ -43,6 +43,7 @@ return require('packer').startup(function(use)
 
   -- Debug tools while creating themes
   use 'nvim-treesitter/playground'
+  use 'folke/tokyonight.nvim'
   use {
     'projekt0n/github-nvim-theme',
     after = "lualine.nvim",
