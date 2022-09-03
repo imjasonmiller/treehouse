@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
     end,
     run = ':TSUpdate'
   }
+  use 'nvim-treesitter/nvim-treesitter-context'
   use 'editorconfig/editorconfig-vim'
   use 'LnL7/vim-nix'
   use 'tbastos/vim-lua' 
