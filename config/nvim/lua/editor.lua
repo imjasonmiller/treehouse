@@ -9,9 +9,15 @@ local vnoremap = maps.vnoremap
 
 o.termguicolors = true                            -- Enable 24-bit RGB color
 
+g.tokynight_italic_functions = true               -- Italicize function names
+g.tokynight_italic_variables = true               -- Italicize variable names
+vim.cmd[[colorscheme tokyonight-night]]           -- Enable tokynight-night colorscheme
+
 o.syntax = "on"
 o.hidden = true  					                        -- Do not unload a buffer when it is abandoned
 o.mouse = o.mouse .. "a" 				                  -- Enable mouse usage for all modes
+o.ls = 0                                          -- Set last status height to `0`
+o.ch = 0                                          -- Set command height to `0`
 
 wo.foldenable = false 					                  -- Disable code folding
 
@@ -53,9 +59,9 @@ o.smartcase = true  					                    -- Override ignorecase if pattern c
 o.gdefault = true   					                    -- Substitute all matches on a line
 
 -- Disable backups
-g.backup = false
-o.swapfile = false
-g.writebackup = false
+g.nobackup = true
+g.noswapfile = true
+g.nowritebackup = true
 
 -- Use clipboard for all operations instead of `+` and/or `*` registers
 o.clipboard = o.clipboard .. 'unnamedplus'
@@ -160,4 +166,9 @@ nnoremap('<leader>fe', te .. 'file_browser.file_browser()<cr>')
 nnoremap('<leader>fg', tb .. 'live_grep()<cr>')
 nnoremap('<leader>fb', tb .. 'buffers()<cr>')
 nnoremap('<leader>fh', tb .. 'help_tags()<cr>')
-nnoremap('<leader>la', tb .. 'lsp_code_actions(require("telescope.themes").get_cursor())<cr>')
+nnoremap('<leader>la', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+
+-----------------
+-- Diagnostics --
+-----------------
+nnoremap('<leader>dd', '<cmd> lua vim.diagnostic.open_float() <CR>')

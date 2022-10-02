@@ -44,14 +44,15 @@ return require('packer').startup(function(use)
 
   -- Debug tools while creating themes
   use 'nvim-treesitter/playground'
+  -- use '~/Work/github-primer.nvim'
   use 'folke/tokyonight.nvim'
-  use {
-    'projekt0n/github-nvim-theme',
-    after = "lualine.nvim",
-    config = function()
-      require('plugins.configs.github-nvim-theme')
-    end
-  }
+  -- use {
+  --   'projekt0n/github-nvim-theme',
+  --   after = "lualine.nvim",
+  --   config = function()
+  --     require('plugins.configs.github-nvim-theme')
+  --   end
+  -- }
 
   -- Rust tools
   use {
